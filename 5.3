@@ -1,0 +1,23 @@
+maxi=0
+for n in range(1000):
+    k=n*7
+    res=bin(k)[2:]
+    respr=''
+    res2=0
+    if k%2==0:
+        res2=k+13
+    else:
+        t0=res[1]
+        t1=res[len(res)-1]
+        for i in range(len(res)):
+            if i==1:
+                respr=respr+t0
+            elif i==len(res)-1:
+                respr=respr+t1
+            else:
+                respr=respr+res[i]
+        res2=int(respr,2)+2
+    if res2<1384:
+        maxi=max(maxi,res2)
+        
+print(maxi)
