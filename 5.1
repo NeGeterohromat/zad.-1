@@ -16,7 +16,7 @@ for n in range(10,30):
     while dom>0:
         dom5=str(dom%5)+dom5
         dom=dom//5
-    res=int(dom5,10)*int(st5,10)
+    res=int(dom5,10)*int(st5,10)//100
     maxi=max(maxi,res)
     
-print(maxi//100)
+print(maxi)
