@@ -1,0 +1,11 @@
+maxi=0
+for n in range(100,1000):
+    if (int(str(n)[0],10)==int(str(n)[1],10)) or (int(str(n)[0],10)==int(str(n)[2],10)) or (int(str(n)[2],10)==int(str(n)[1],10)):
+        n=102
+    if (int(str(n)[0],10)+int(str(n)[1],10))%2==1:
+        res=(int(str(n)[0],10)*10+int(str(n)[1],10))*10
+    else:
+        res=n
+    if (maxi<=res):
+        maxi=res
+        print(n,res)
