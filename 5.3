@@ -11,9 +11,9 @@ for n in range(1000):
         t1=res[len(res)-1]
         for i in range(len(res)):
             if i==1:
-                respr=respr+t0
-            elif i==len(res)-1:
                 respr=respr+t1
+            elif i==len(res)-1:
+                respr=respr+t0
             else:
                 respr=respr+res[i]
         res2=int(respr,2)+2
