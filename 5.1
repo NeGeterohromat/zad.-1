@@ -1,0 +1,22 @@
+st=20000 
+st5=''
+maxi=0
+while st>0:
+    st5=str(st%5)+st5
+    st=st//5
+
+for n in range(10,30):
+    ver=0
+    for i in range(len(str(n))):
+        ver=max(ver,int(str(n)[i],10))
+    
+    dom=n**2-(2*ver)**2
+    
+    dom5=''
+    while dom>0:
+        dom5=str(dom%5)+dom5
+        dom=dom//5
+    res=int(dom5,10)*int(st5,10)
+    maxi=max(maxi,res)
+    
+print(maxi//100)
